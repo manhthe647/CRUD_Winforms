@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="tbl2" Class="TranManhThe_0205266DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=tbl2;User ID=abc" SettingsObjectName="de1_TranManhThe_0205266.Properties.Settings" SettingsPropertyName="tbl2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_taikhoan" Member="tbl_taikhoans">
+    <Type Name="tbl_taikhoan">
+      <Column Name="tktaikhoan" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tkmatkhau" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="nqma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_nhomquyen_tbl_taikhoan" Member="tbl_nhomquyen" ThisKey="nqma" OtherKey="nqma" Type="tbl_nhomquyen" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_sinhvien" Member="tbl_sinhviens">
+    <Type Name="tbl_sinhvien">
+      <Column Name="svma" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="svten" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="svngaysinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="svgioitinh" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="svquequan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lqlma" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="tbl_lopquanly_tbl_sinhvien" Member="tbl_lopquanly" ThisKey="lqlma" OtherKey="lqlma" Type="tbl_lopquanly" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_nhomquyen" Member="tbl_nhomquyens">
+    <Type Name="tbl_nhomquyen">
+      <Column Name="nqma" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nqten" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nqmota" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="tbl_nhomquyen_tbl_taikhoan" Member="tbl_taikhoans" ThisKey="nqma" OtherKey="nqma" Type="tbl_taikhoan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_lopquanly" Member="tbl_lopquanlies">
+    <Type Name="tbl_lopquanly">
+      <Column Name="lqlma" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="lqlten" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="lqlkhoahoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_lopquanly_tbl_sinhvien" Member="tbl_sinhviens" ThisKey="lqlma" OtherKey="lqlma" Type="tbl_sinhvien" />
+    </Type>
+  </Table>
+</Database>

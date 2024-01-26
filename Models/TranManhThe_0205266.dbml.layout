@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TranManhThe_0205266">
+  <DataContextMoniker Name="/TranManhThe_0205266DataContext" />
+  <nestedChildShapes>
+    <classShape Id="1fc7f7c8-56ab-44a6-a475-7b21bcd8e800" absoluteBounds="3.5, 3.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/TranManhThe_0205266DataContext/tbl_taikhoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81127032-c8cc-4447-a8a5-35f5fcecdfd3" absoluteBounds="3.515, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5b645046-427b-4cae-b8b3-1578406f6fbf" absoluteBounds="3.5, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/TranManhThe_0205266DataContext/tbl_sinhvien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51406311-089e-42f8-bc7b-93d53b438603" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db52c94f-6436-44cf-9c0c-2f03d08f4d4c" absoluteBounds="0.75, 3.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/TranManhThe_0205266DataContext/tbl_nhomquyen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a07cb31-b36a-4889-9d23-be767ea8346c" absoluteBounds="0.765, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e6fbb914-cbdc-49ee-8f16-c5d2c035b30d" absoluteBounds="0.75, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/TranManhThe_0205266DataContext/tbl_lopquanly" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b97bd546-e32e-4007-af5a-78b59a775c33" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.56814697265625); (3.5 : 4.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TranManhThe_0205266DataContext/tbl_nhomquyen/tbl_nhomquyen_tbl_taikhoan" />
+      <nodes>
+        <classShapeMoniker Id="db52c94f-6436-44cf-9c0c-2f03d08f4d4c" />
+        <classShapeMoniker Id="1fc7f7c8-56ab-44a6-a475-7b21bcd8e800" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.94314697265625); (3.5 : 1.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TranManhThe_0205266DataContext/tbl_lopquanly/tbl_lopquanly_tbl_sinhvien" />
+      <nodes>
+        <classShapeMoniker Id="e6fbb914-cbdc-49ee-8f16-c5d2c035b30d" />
+        <classShapeMoniker Id="5b645046-427b-4cae-b8b3-1578406f6fbf" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
